@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Tutorial</title>
+    <!-- Not present in the tutorial. Just for basic styling. -->
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel" src="scripts/example.js"></script>
+    <script type="text/babel">
+      // To get started with this tutorial running your own code, simply remove
+      // the script tag loading scripts/example.js and start writing code here.
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Tutorial</title>
+    <!-- Not present in the tutorial. Just for basic styling. -->
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel">
+var CommentBox = React.createClass({//我们通过 JavaScript 对象传递一些方法到 React.createClass() 来创建一个新的 React 组件。其中最重要的方法是 render ，该方法返回一颗 React 组件树，这棵树最终将会渲染成 HTML 。
+  render:function() {
+    return (//这里的 <div> 标签不是真正的 DOM 节点；他们是 React div 组件的实例。你可以认为这些标签就是一些标记或者数据， React 知道如何处理它们。React 是安全的。我们不生成 HTML 字符串，因此默认阻止了 XSS 攻击。<div className="commentBox">
+        Hello, world! I am a CommentBox.
+      </div>
+    );
+  }
+});
+//在#content渲染CommentBox 模块
+
+React.render(
+  <CommentBox />,
+  document.getElementById('content')
+);
+    </script>
+  </body>
+</html>
